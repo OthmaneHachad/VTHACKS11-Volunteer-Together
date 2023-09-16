@@ -1,23 +1,37 @@
 <script>
     import { onMount, onDestroy } from 'svelte';
-    import { auth } from './firebase.js';
+    import { auth, db } from './firebase.js';
     import { createUserWithEmailAndPassword,signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+    import {doc, setDoc} from 'firebase/firestore'
     import { navigate } from 'svelte-routing';
 
     let emailSignUp = '';
     let passwordSignUp = '';
     let emailLogIn = '';
+    let role = "volunteer" ;
     let passwordLogIn = '';
 
-        const signUp = async () => {
-            try {
-                const userCredential = await createUserWithEmailAndPassword(auth, emailSignUp, passwordSignUp);
-                console.log("User signed up:", userCredential.user);
-                navigate("/dashboardMap");  // Or use svelte-routing's navigate
-            } catch (error) {
-                console.error("Error signing up:", error);
-            }
-        };
+    let roleOptions = ['volunteer', 'host', 'delivery'];  // Added a default option
+
+    const handleDropdownChange = (event) => {
+        role = event.target.value;
+    };
+
+
+    const signUp = async () => {
+        try {
+            const userCredential = await createUserWithEmailAndPassword(auth, emailSignUp, passwordSignUp);
+            console.log("User signed up:", userCredential.user);
+            // Store the role in the Firebase Firestore
+            const userRef = doc(db, 'users', userCredential.user.uid);
+            await setDoc(userRef, {
+                role: role
+            });
+            navigate("/dashboardMap");  // Or use svelte-routing's navigate
+        } catch (error) {
+            console.error("Error signing up:", error);
+        }
+    };
 
         const login = async () => {
             try {
@@ -53,6 +67,15 @@
         <h1>Start volunteering now !</h1>
         <input bind:value={emailSignUp} placeholder="Email" />
         <input type="password" bind:value={passwordSignUp} placeholder="Password" />
+        <!-- Role dropdown -->
+        <div class="roleDropdown">
+            <select bind:value={role} on:change={handleDropdownChange}>
+                {#each roleOptions as roleOption}
+                    <option value={roleOption}>{roleOption}</option>
+                {/each}
+            </select>
+        </div>
+        
         <button on:click={signUp}>Sign Up</button>
     </div>
 
@@ -60,6 +83,7 @@
         <h1>Already a volunteer ?</h1>
         <input bind:value={emailLogIn} placeholder="Email" />
         <input type="password" bind:value={passwordLogIn} placeholder="Password" />
+
         <button on:click={login}>Log In</button>
     </div>
 </div>

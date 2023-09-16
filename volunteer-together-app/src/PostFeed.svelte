@@ -62,8 +62,7 @@
 </script>
 
 
-<MenuBar items={[{href: '/dashboardMap', label: 'Map'},{href: '/feed', label: 'Feed'}]} />
-
+<MenuBar items={[{ href: "/dashboardMap", label: "Map" },{ href: "/feed", label: "Feed" }, { href: "/profilePage", label: "Profile" }]}/>
 <div class="post-form">
     <input bind:value={newTitle} placeholder="Post Title" />
     <textarea bind:value={newContent} placeholder="Post Content"></textarea>
@@ -86,9 +85,6 @@
 </section>
 
 <style>
-    :global() {
-        background-color: grey;
-    }
     .post-form {
         display: flex;
         flex-direction: column;

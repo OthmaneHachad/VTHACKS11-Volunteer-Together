@@ -25,6 +25,7 @@
         
         map = new google.maps.Map(container, {
             zoom: zoom,
+            minZoom: zoom - 3,
             center: location
             //styles: mapStyles // optional
         });
@@ -119,7 +120,7 @@
     });*/
 </script>
 
-<MenuBar items={[{ href: "/dashboardMap", label: "Map" },{ href: "/feed", label: "Feed" },]}/>
+<MenuBar items={[{ href: "/dashboardMap", label: "Map" },{ href: "/feed", label: "Feed" }, { href: "/profilePage", label: "Profile" }]}/>
 <div class="full-screen" bind:this={container} />
 
 
