@@ -1,5 +1,5 @@
 <script>
-
+    import MenuBar from './MenuBar.svelte';
 </script>
 
-<h1>The Feed is here !</h1>
+<MenuBar items={[{href: '/dashboardMap', label: 'Map'},{href: '/feed', label: 'Feed'}]} />

@@ -16,13 +16,14 @@
         z-index: 2; /* Making sure it's above most of the content */
     }
 
-    .menu-items {
+    .menu-item {
         display: flex; /* This is to ensure menu items are horizontally displayed */
         gap: 150px; /* Space between menu items */
     }
 
     .menu-bar a {
-        color: white;
+        color: black;
+        font-weight: bold;
         text-decoration: none;
     }
 
@@ -34,6 +35,6 @@
 
 <div class="menu-bar">
     {#each items as item}
-        <a href={item.href}>{item.label}</a>
+        <a href={item.href} class="menu-item">{item.label}</a>
     {/each}
 </div>
