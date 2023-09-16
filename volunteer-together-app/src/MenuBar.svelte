@@ -13,12 +13,13 @@
         background-color: rgba(0, 0, 0, 0.0); /* 20% black opacity */
         position: absolute;
         top: 0;
+        gap: 150px; /* Space between menu items */
         z-index: 2; /* Making sure it's above most of the content */
     }
 
     .menu-item {
         display: flex; /* This is to ensure menu items are horizontally displayed */
-        gap: 150px; /* Space between menu items */
+        
     }
 
     .menu-bar a {

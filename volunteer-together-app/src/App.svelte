@@ -1,9 +1,3 @@
-<svelte:head>
-	<script defer async
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQdXjUnjQHJINv-x9Z_tLpSo7nL7_qo9o&callback=initMap">
-	</script>
-</svelte:head>
-
 <script>
     
 	import {Router, Route} from 'svelte-routing';
@@ -11,9 +5,6 @@
 	import DashboardMap from './DashboardMap.svelte';
 	import PostFeed from './PostFeed.svelte';
     import { GoogleAuthProvider } from 'firebase/auth';
-
-
-
 </script>
 
 
