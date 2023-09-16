@@ -51,10 +51,10 @@ def get_user_type():
 
 
 
-#my_user = create_user("othmane3333hachad@gmail.com", "ttqagag")
+my_user = create_user("abuabu@gmail.com", "ththth")
 
-#set_user_type = assign_user_type(my_user.uid, "volunteer")
+set_user_type = assign_user_type(my_user.uid, "host")
 
 
 
-#print(set_user_type["updated_user_type"])
+print(set_user_type["updated_user_type"])
