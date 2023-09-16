@@ -26,6 +26,9 @@
         color: black;
         font-weight: bold;
         text-decoration: none;
+        padding: 10px 20px; /* Added padding around the text for a bigger box */
+        background-color: rgba(255, 255, 255, 0.5); /* White color with 50% opacity */
+        border-radius: 5px; /* Optional: For rounded corners */
     }
 
     /* Hover effect for menu items */

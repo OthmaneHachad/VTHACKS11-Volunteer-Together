@@ -9,7 +9,8 @@
 
     let container;
     let map;
-    let location = { lat: -34.397, lng: 150.644 };
+    let zoom = 6;
+    let location = { lat: 31.065143293570422, lng: -8.385249744877594 };
 
     let posts = [] ;
     const postsCollection = collection(db, "posts"); // posts collection in Firestore
@@ -23,7 +24,7 @@
         }
         
         map = new google.maps.Map(container, {
-            zoom: 4,
+            zoom: zoom,
             center: location
             //styles: mapStyles // optional
         });
@@ -45,7 +46,7 @@
                 const lat = parseFloat(location.lat);
                 const lng = parseFloat(location.lng);
 
-                
+
                 if (!isNaN(lat) && !isNaN(lng)) { // Ensure they are valid numbers
                     const marker = new google.maps.Marker({
                         position: { lat: lat, lng: lng },

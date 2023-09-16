@@ -86,6 +86,9 @@
 </section>
 
 <style>
+    :global() {
+        background-color: grey;
+    }
     .post-form {
         display: flex;
         flex-direction: column;
