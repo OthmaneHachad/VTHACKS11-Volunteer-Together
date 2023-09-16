@@ -2,6 +2,7 @@ console.log("INSIDE firebase.js")
 
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 console.log("imported firebase")
 
@@ -19,5 +20,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-
-export { auth };
+const db = getFirestore(app);
+export { auth, db };
