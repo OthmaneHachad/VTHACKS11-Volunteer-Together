@@ -44,11 +44,11 @@ def assign_user_type(uid, user_type):
     }
 
 
-def create_user_type():
-    pass
 
 def get_user_type():
     pass
+
+
 
 
 #my_user = create_user("othmane3333hachad@gmail.com", "ttqagag")
