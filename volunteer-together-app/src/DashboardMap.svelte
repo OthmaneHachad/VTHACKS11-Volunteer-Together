@@ -3,6 +3,7 @@
 <script>
     //import mapStyles from './map-styles'; // optional
     import { onMount } from 'svelte';
+    import MenuBar from './MenuBar.svelte';
 
 
     let container;
@@ -30,3 +31,4 @@
     </style>
 
     <div class="full-screen" bind:this={container}></div>
+    <MenuBar items={[{href: '/dashboardMap', label: 'Map'},{href: '/feed', label: 'Feed'}]} />
