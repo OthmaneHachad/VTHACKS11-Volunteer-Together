@@ -1,6 +1,8 @@
 # VTHACKS11-Volunteer-Together
 
-
+to run this project:
+- change diretory into the /volunteer-together-app/src and "npm run build" to buil the svelte files
+- then go back to the root of the project and change directories into /src and run "python3 web_server.py"
 Funcitonnalities:
 - simple sign up process
     Information:
