@@ -13,6 +13,8 @@ let phoneNumber = writable('');
 let userUid = writable('');
 
 async function fetchUserProfile(uid) {
+
+    // fetch the data from the user uid form the db
     const userDocRef = doc(db, 'users', uid);
     const userProfile = await getDoc(userDocRef);
             
