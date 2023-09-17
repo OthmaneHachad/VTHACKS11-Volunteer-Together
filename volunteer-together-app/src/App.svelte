@@ -4,7 +4,6 @@
 	import Signup from './Signup.svelte';
 	import DashboardMap from './DashboardMap.svelte';
 	import PostFeed from './PostFeed.svelte';
-    import { GoogleAuthProvider } from 'firebase/auth';
     import ProfilePage from './profilePage.svelte';
 </script>
 

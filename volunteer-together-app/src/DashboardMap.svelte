@@ -6,11 +6,13 @@
     import MenuBar from "./MenuBar.svelte";
     import { db } from './firebase.js'; 
     import { collection, query, getDocs } from 'firebase/firestore';
+    //import {useParams} from 'svelte-routing';
 
     let container;
     let map;
     let zoom = 6;
-    let location = { lat: 31.065143293570422, lng: -8.385249744877594 };
+    //let {params} = useParams();
+    let location = {lat: 31.055732146452986, lng: -8.377009998795002};
 
     let posts = [] ;
     const postsCollection = collection(db, "posts"); // posts collection in Firestore

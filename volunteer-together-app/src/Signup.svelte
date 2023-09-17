@@ -62,6 +62,10 @@
         //});
 </script>
 
+<h1>Volunteer Together !</h1>
+<p>This web app lets people come together and help those in need. Spread awareness and help your fellow brothers and sisters. The idea originates from the late earthquakes Morocco has faced. It seemed like people were unable to support the victims of those disastrous events other than through professional organization.
+     Here, you can choose to be a volunteer and participate in donations, be a host and lend some space to store those donations, or be a delivery person and make sure those donations are brought to those who need it.
+</p>
 <div class="container">
     <div class="connectUser" id="createUser">
         <h1>Start volunteering now !</h1>
