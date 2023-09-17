@@ -25,7 +25,7 @@
             firstName = ''; // reset the title
             lastName = ''; // reset the content
             email = ''; // reset the location
-            phoneNumber = 0;
+            phoneNumber = "";
         } catch (e) {
             console.error("Error adding document to database: ", e);
         }
